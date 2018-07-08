@@ -1,12 +1,12 @@
 /**
  * ======================================================================
- * 版權：富士康工業互聯網股份有限公司 平臺解決方案事業處 版權所有 (c) 2018
+ * 版權：
  * 文件：com.odin.rest.vo
  * 所含類：SpringMVCPaginationSupport
  * 修改記錄
  * 日期				作者					版本				內容
  * ======================================================================
- * 2018-07-23		zn.xie(F1334993)	V1.0			新建
+ * 
  * ======================================================================
  */
 package com.vic.rest.vo;
@@ -21,9 +21,9 @@ import java.util.List;
  * <p>Copyright:Copyright (c) 2018</p>
  * <p>Company:Foxconn</p>
  *
- * @author zn.xie(F1334993)
+ * @author  
  * @version 1.0
- * @date:2018-07-23
+ * @date:
  */
 public class Pagination<E>{
 	public static final int PAGESIZE = 10;

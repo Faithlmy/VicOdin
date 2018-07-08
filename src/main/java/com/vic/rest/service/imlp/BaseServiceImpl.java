@@ -1,12 +1,12 @@
 /**
  * ======================================================================
- * 版權：富士康工業互聯網股份有限公司 平臺解決方案事業處 版權所有 (c) 2018
+ * 版權：
  * 文件：com.odin.rest.service.impl
  * 所含類：BaseServiceImpl
  * 修改記錄
  * 日期				作者					版本				內容
  * ======================================================================
- * 2018-07-10		zn.xie(F1334993)	V1.0			新建
+ * 
  * ======================================================================
  */
 package com.vic.rest.service.impl;
@@ -70,9 +70,9 @@ import com.vic.rest.vo.Pagination;
  * <p>Copyright:Copyright (c) 2018</p>
  * <p>Company:Foxconn</p>
  *
- * @author zn.xie(F1334993)
+ * @author  
  * @version 1.0
- * @date:2018-07-10
+ * @date:
  */
 public class BaseServiceImpl implements BaseService {
 
@@ -114,8 +114,8 @@ public class BaseServiceImpl implements BaseService {
     /**
      * @method:isMysql
      * @description:判斷數據庫類型
-     * @author:zn.xie(F1334993)  
-     * @date:2018-08-22
+     * @author:   
+     * @date:
      * @return boolean
      */
     public boolean isMysql() {
@@ -127,8 +127,8 @@ public class BaseServiceImpl implements BaseService {
      * @return List<Map>
      * @method:selectBySql
      * @description:根據傳入的sql語句查詢
-     * @author:zn.xie(F1334993)
-     * @date:2018-07-10
+     * @author: 
+     * @date:
      */
     public List<Map> selectBySql(String sql) {
         return this.selectBySql(null, sql);
@@ -140,8 +140,8 @@ public class BaseServiceImpl implements BaseService {
      * @return List<Map>
      * @method:selectBySql
      * @description:根據傳入的sql語句查詢
-     * @author:zn.xie(F1334993)
-     * @date:2018-07-10
+     * @author: 
+     * @date:
      */
     public List<Map> selectBySql(String dbName, String sql) {
         //判斷非空
@@ -173,8 +173,8 @@ public class BaseServiceImpl implements BaseService {
      * @return List<LinkedHashMap>
      * @method:selectBySql
      * @description:根據傳入的sql語句查詢
-     * @author:zn.xie(F1334993)
-     * @date:2018-07-10
+     * @author: 
+     * @date:
      */
     public List<LinkedHashMap> selectBySqlSort(String sql) {
     	return this.selectBySqlSort(null, sql);
@@ -186,8 +186,8 @@ public class BaseServiceImpl implements BaseService {
      * @return List<Map>
      * @method:selectBySql
      * @description:根據傳入的sql語句查詢
-     * @author:zn.xie(F1334993)
-     * @date:2018-07-10
+     * @author: 
+     * @date:
      */
     public List<LinkedHashMap> selectBySqlSort(String dbName, String sql) {
     	//判斷非空
@@ -221,8 +221,8 @@ public class BaseServiceImpl implements BaseService {
      * @return Pagination
      * @method:selectPaginationBySql
      * @description:分頁查詢
-     * @author:zn.xie(F1334993)
-     * @date:2018-07-24
+     * @author: 
+     * @date:
      */
     @SuppressWarnings("unchecked")
     public Pagination selectPaginationBySql(String sql, final int pageNo, final int pagesize) {
@@ -237,8 +237,8 @@ public class BaseServiceImpl implements BaseService {
      * @return Pagination
      * @method:selectPaginationBySql
      * @description:分頁查詢
-     * @author:zn.xie(F1334993)
-     * @date:2018-07-24
+     * @author: 
+     * @date:
      */
     @SuppressWarnings("unchecked")
     public Pagination selectPaginationBySql(String dbName, String sql, final int pageNo, final int pagesize) {
@@ -293,8 +293,8 @@ public class BaseServiceImpl implements BaseService {
     /**
      * @method:insertBySql
      * @description:插入操作
-     * @author:zn.xie(F1334993)  
-     * @date:2018-08-23
+     * @author:   
+     * @date:
      * @param sql
      * @return
      */
@@ -321,8 +321,8 @@ public class BaseServiceImpl implements BaseService {
     /**
      * @method:executeBySql
      * @description:執行sql
-     * @author:zn.xie(F1334993)  
-     * @date:2018-08-30
+     * @author:   
+     * @date:
      * @param sql
      * @return
      */
@@ -342,8 +342,8 @@ public class BaseServiceImpl implements BaseService {
      * @return String
      * @method:removeOrders
      * @description:去掉sql語句中的order排序以提供查詢總條數的效率
-     * @author:zn.xie(F1334993)
-     * @date:2018-07-24
+     * @author: 
+     * @date:
      */
     private static String removeOrders(String sql) {
         Assert.hasText(sql);
@@ -365,8 +365,8 @@ public class BaseServiceImpl implements BaseService {
      * @throws Exception
      * @method:getLastTable
      * @description:獲取最新的表名
-     * @author:zn.xie(F1334993)
-     * @date:2018-07-23
+     * @author: 
+     * @date:
      */
     public List<String> getLastTableList(String tableNameLiKe, int num) throws Exception {
         //判斷參數
@@ -401,8 +401,8 @@ public class BaseServiceImpl implements BaseService {
      * @throws Exception
      * @method:getLastTable
      * @description:獲取最新的表名
-     * @author:zn.xie(F1334993)
-     * @date:2018-07-23
+     * @author: 
+     * @date:
      */
     public String getLastTable(String tableNameLiKe) throws Exception {
         //判斷參數
@@ -455,8 +455,8 @@ public class BaseServiceImpl implements BaseService {
      * @return String
      * @method:getTb
      * @description:獲取表名
-     * @author:zn.xie(F1334993) 
-     * @date:2018-07-27
+     * @author:  
+     * @date:
      */
 	public String getTb(String key) throws Exception {
     	
@@ -486,8 +486,8 @@ public class BaseServiceImpl implements BaseService {
     /**
 	 * @method:getRedisUserByToken
 	 * @description:通過token獲取用戶信息
-	 * @author:zn.xie(F1334993)  
-	 * @date:2018-11-07
+	 * @author:   
+	 * @date:
 	 * @param token
 	 * @return LinkedHashMap
 	 */
@@ -508,8 +508,8 @@ public class BaseServiceImpl implements BaseService {
     /**
      * @method:changeMapSpot
      * @description:替換map中帶“.”的key
-     * @author:zn.xie(F1334993)  
-     * @date:2018-09-06
+     * @author:   
+     * @date:
      * @param tableTable
      * @return List<LinkedHashMap>
      * @throws Exception
@@ -536,8 +536,8 @@ public class BaseServiceImpl implements BaseService {
     /**
      * @method:toExportExcel
      * @description:導出excel
-     * @author:zn.xie(F1334993)  
-     * @date:2018-09-06
+     * @author:   
+     * @date:
      * @param response
      * @param fileName
      * @param title

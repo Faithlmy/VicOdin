@@ -1,11 +1,11 @@
 /**======================================================================
- * 版權：富士康工業互聯網股份有限公司 平臺解決方案事業處 版權所有 (c) 2018
+ * 版權：
  * 文件：com.odin.rest.service
  * 所含類：BaseService 
  * 修改記錄
  * 日期				作者					版本				內容
  * ======================================================================
- * 2018-07-10		zn.xie(F1334993)	V1.0			新建
+ * 
  * ======================================================================
  */
 package com.vic.rest.service;
@@ -24,8 +24,8 @@ import com.vic.rest.vo.Pagination;
  * <p>Description:TODO </p>
  * <p>Copyright:Copyright (c) 2018</p>
  * <p>Company:Foxconn</p>
- * @author zn.xie(F1334993)
- * @date:2018-07-10
+ * @author  
+ * @date:
  * @version 1.0
  */
 public interface BaseService {
@@ -33,8 +33,8 @@ public interface BaseService {
 	/**
      * @method:isMysql
      * @description:判斷數據庫類型
-     * @author:zn.xie(F1334993)  
-     * @date:2018-08-22
+     * @author:   
+     * @date:
      * @return boolean
      */
     public boolean isMysql();
@@ -42,8 +42,8 @@ public interface BaseService {
 	/**
 	 * @method:selectBySql
 	 * @description:根據傳入的sql語句查詢
-	 * @author:zn.xie(F1334993)  
-	 * @date:2018-07-10
+	 * @author:   
+	 * @date:
 	 * @param sql
 	 * @return List<Map>
 	 */
@@ -52,8 +52,8 @@ public interface BaseService {
 	/**
 	 * @method:selectBySql
 	 * @description:根據傳入的sql語句查詢
-	 * @author:zn.xie(F1334993)  
-	 * @date:2018-07-10
+	 * @author:   
+	 * @date:
 	 * @param dbName(數據庫名稱)
 	 * @param sql
 	 * @return List<Map>
@@ -63,8 +63,8 @@ public interface BaseService {
 	/**
 	 * @method:selectBySql
 	 * @description:根據傳入的sql語句查詢
-	 * @author:zn.xie(F1334993)  
-	 * @date:2018-07-10
+	 * @author:   
+	 * @date:
 	 * @param sql
 	 * @return List<LinkedHashMap>
 	 */
@@ -73,8 +73,8 @@ public interface BaseService {
 	/**
 	 * @method:selectBySql
 	 * @description:根據傳入的sql語句查詢
-	 * @author:zn.xie(F1334993)  
-	 * @date:2018-07-10
+	 * @author:   
+	 * @date:
 	 * @param dbName(數據庫名稱)
 	 * @param sql
 	 * @return List<LinkedHashMap>
@@ -84,8 +84,8 @@ public interface BaseService {
 	/**
 	 * @method:selectPaginationBySql
 	 * @description:分頁查詢
-	 * @author:zn.xie(F1334993)  
-	 * @date:2018-07-24
+	 * @author:   
+	 * @date:
 	 * @param sql
 	 * @param pageNo
 	 * @param pagesize
@@ -97,8 +97,8 @@ public interface BaseService {
 	/**
 	 * @method:selectPaginationBySql
 	 * @description:分頁查詢
-	 * @author:zn.xie(F1334993)  
-	 * @date:2018-07-24
+	 * @author:   
+	 * @date:
 	 * @param dbName
 	 * @param sql
 	 * @param pageNo
@@ -111,8 +111,8 @@ public interface BaseService {
 	/**
 	 * @method:getLastTable
 	 * @description:獲取最新的表名
-	 * @author:zn.xie(F1334993)  
-	 * @date:2018-07-23
+	 * @author:   
+	 * @date:
 	 * @param tableNameLiKe
 	 * @param num
 	 * @return List<String>
@@ -123,8 +123,8 @@ public interface BaseService {
 	/**
 	 * @method:getLastTable
 	 * @description:獲取最新的表名
-	 * @author:zn.xie(F1334993)  
-	 * @date:2018-07-23
+	 * @author:   
+	 * @date:
 	 * @param tableNameLiKe
 	 * @return String
 	 * @throws Exception
@@ -134,8 +134,8 @@ public interface BaseService {
 	/**
      * @method:getTb
      * @description:獲取表名
-     * @author:zn.xie(F1334993)  
-     * @date:2018-07-27
+     * @author:   
+     * @date:
      * @param key
      * @return String
      */
@@ -144,8 +144,8 @@ public interface BaseService {
     /**
 	 * @method:getRedisUserByToken
 	 * @description:通過token獲取用戶信息
-	 * @author:zn.xie(F1334993)  
-	 * @date:2018-11-07
+	 * @author:   
+	 * @date:
 	 * @param token
 	 * @return LinkedHashMap
 	 */
@@ -154,8 +154,8 @@ public interface BaseService {
     /**
      * @method:changeMapSpot
      * @description:替換map中帶“.”的key
-     * @author:zn.xie(F1334993)  
-     * @date:2018-09-06
+     * @author:   
+     * @date:
      * @param tableTable
      * @return List<LinkedHashMap>
      * @throws Exception
@@ -165,8 +165,8 @@ public interface BaseService {
     /**
      * @method:toExportExcel
      * @description:導出excel
-     * @author:zn.xie(F1334993)  
-     * @date:2018-09-06
+     * @author:   
+     * @date:
      * @param response
      * @param fileName
      * @param title

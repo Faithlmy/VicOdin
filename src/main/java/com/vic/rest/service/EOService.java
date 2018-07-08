@@ -15,8 +15,8 @@ public interface EOService {
 	/**
 	 * @method: getGlobalEOData
 	 * @description: 獲取料号根据总调度计划各分类的总数和占比
-	 * @author: my.liu(F1333615)  
-	 * @date: 2018-07-14
+	 * @author:  
+	 * @date: 
 	 * @return List<Map>
 	 * @throws Exception  
 	 *///(5.01002) 
@@ -27,8 +27,8 @@ public interface EOService {
 	/**
 	 * @method: getGlobalEOData
 	 * @description: 獲取料号根据总调度计划各分类的总数和占比
-	 * @author: my.liu(F1333615)  
-	 * @date: 2018-07-14
+	 * @author: 
+	 * @date: 
 	 * @return List<Map>
 	 * @throws Exception  
 	 *///(5.01) 
@@ -38,8 +38,8 @@ public interface EOService {
 	/**
 	 * @method: getGlobalEODashboardData
 	 * @description: 獲取料号根据总调度计划各分类的总数和占比
-	 * @author: my.liu(F1333615)  
-	 * @date: 2018-07-14
+	 * @author:  
+	 * @date: 
 	 * @return List<Map>
 	 * @throws Exception  
 	 *///(5.02)
@@ -49,8 +49,8 @@ public interface EOService {
 	/**
 	 * @method: getGlobalEODashboardInfo
 	 * @description :獲取Global E&O Dashboard 条形图的TOP10%或TOP20%數據
-	 * @author: my.liu(F1333615)  
-	 * @date: 2018-07-14
+	 * @author:   
+	 * @date: 
 	 * @return List<Map>
 	 * @throws Exception  
 	 *///(5.03)
@@ -60,8 +60,8 @@ public interface EOService {
 	/**
 	 * @method: getWeeklyEOTrendData
 	 * @description: 獲取每个站点的每周E&O趋势
-	 * @author: my.liu(F1333615)  
-	 * @date: 2018-07-14
+	 * @author:  
+	 * @date: 
 	 * @return List<Map>
 	 * @throws Exception  
 	 *///(5.04) 
@@ -71,8 +71,8 @@ public interface EOService {
 	/**
 	 * @method: getWeeklyEOData
 	 * @description: 獲取每个站点的三种E&O状态（Excess、Obsolete、Optimal）的数量
-	 * @author: my.liu(F1333615)  
-	 * @date: 2018-07-14
+	 * @author:  
+	 * @date: 
 	 * @return List<Map>
 	 * @throws Exception  
 	 *///(5.05)  
@@ -82,8 +82,8 @@ public interface EOService {
 	/**
 	 * @method: getWeeklyEOInfo
 	 * @description: 獲取Weekly E&O詳細數據
-	 * @author: my.liu(F1333615)  
-	 * @date: 2018-07-14
+	 * @author:   
+	 * @date: 
 	 * @return List<Map>
 	 * @throws Exception  
 	 *///(5.06)
@@ -93,8 +93,8 @@ public interface EOService {
 	/**
 	 * @method: getPONumberInfo
 	 * @description: 獲取每个物料的PO Number(action)的詳細數據
-	 * @author: my.liu(F1333615)  
-	 * @date: 2018-07-14
+	 * @author:   
+	 * @date: 
 	 * @return List<Map>
 	 * @throws Exception  
 	 *///(5.07) 
@@ -104,8 +104,8 @@ public interface EOService {
 	 /**
 	 * @method: getQuarterlyReserveData
 	 * @description: 獲取各个Site的季度性的E&O储备的数量
-	 * @author: my.liu(F1333615)  
-	 * @date: 2018-07-14
+	 * @author:  
+	 * @date: 
 	 * @return List<Map>
 	 * @throws Exception
 	 *///(5.08)
@@ -116,8 +116,8 @@ public interface EOService {
 	 /**
 	 * @method: getQuarterlyReserveData
 	 * @description: 獲取各个Site的季度性的E&O储备的数量
-	 * @author: my.liu(F1333615)  
-	 * @date: 2018-07-14
+	 * @author:  
+	 * @date: 
 	 * @return List<Map>
 	 * @throws Exception
 	 *///(5.08) Excel
@@ -127,8 +127,8 @@ public interface EOService {
 	 /**
 	 * @method: getQuarterlyReserveData
 	 * @description: 獲取各个Site的季度性的E&O储备的数量
-	 * @author: my.liu(F1333615)  
-	 * @date: 2018-07-14
+	 * @author: 
+	 * @date: 
 	 * @return List<Map>
 	 * @throws Exception
 	 *///(5.08) Excel
@@ -137,8 +137,8 @@ public interface EOService {
 	 /**
 	 * @method: getQuarterlyReserveData
 	 * @description: 獲取各个Site的季度性的E&O储备的数量
-	 * @author: my.liu(F1333615)  
-	 * @date: 2018-07-14
+	 * @author: 
+	 * @date: 
 	 * @return List<Map>
 	 * @throws Exception
 	 *///(5.08) Excel
@@ -148,8 +148,8 @@ public interface EOService {
 	 /**
 	 * @method: getQuarterlyReserveData
 	 * @description: 獲取各个Site的季度性的E&O储备的数量
-	 * @author: my.liu(F1333615)  
-	 * @date: 2018-07-14
+	 * @author:   
+	 * @date: 
 	 * @return List<Map>
 	 * @throws Exception
 	 *///(5.08) Excel
@@ -158,8 +158,8 @@ public interface EOService {
 	/**
 	* @method: getCt2rBpnData
 	* @description: 測試方法
-	* @author: my.liu(F1333615)  
-	* @date: 2018-07-14
+	* @author:  
+	* @date: 
 	* @return List<Map>
 	* @throws Exception
 	*///19
@@ -169,8 +169,8 @@ public interface EOService {
 	/**
 	* @method: getCt2rBpnData
 	* @description: 測試方法
-	* @author: my.liu(F1333615)  
-	* @date: 2018-07-14
+	* @author:  
+	* @date: 
 	* @return List<Map>
 	* @throws Exception
 	*///19
