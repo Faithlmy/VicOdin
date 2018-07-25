@@ -1,14 +1,4 @@
-/**
- * ======================================================================
- * 版權：
- * 文件：com.odin.rest.vo
- * 所含類：SpringMVCPaginationSupport
- * 修改記錄
- * 日期				作者					版本				內容
- * ======================================================================
- * 
- * ======================================================================
- */
+
 package com.vic.rest.vo;
 
 import java.util.ArrayList;
@@ -21,9 +11,9 @@ import java.util.List;
  * <p>Copyright:Copyright (c) 2018</p>
  * <p>Company:Foxconn</p>
  *
- * @author  
+ * @author zn.xie(F1334993)
  * @version 1.0
- * @date:
+ * @date:2018-07-23
  */
 public class Pagination<E>{
 	public static final int PAGESIZE = 10;
