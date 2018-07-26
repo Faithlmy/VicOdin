@@ -19,11 +19,6 @@ import javax.servlet.http.HttpServletResponse;
 import com.vic.rest.vo.Pagination;
 
 /**
- * <p>Titile:BaseService</p>
- * <p>ProjectName:odin</p>
- * <p>Description:TODO </p>
- * <p>Copyright:Copyright (c) 2018</p>
- * <p>Company:Foxconn</p>
  * @author  
  * @date:
  * @version 1.0
@@ -145,7 +140,7 @@ public interface BaseService {
 	 * @method:getRedisUserByToken
 	 * @description:通過token獲取用戶信息
 	 * @author:   
-	 * @date:
+	 * @date:07
 	 * @param token
 	 * @return LinkedHashMap
 	 */
@@ -155,7 +150,7 @@ public interface BaseService {
      * @method:changeMapSpot
      * @description:替換map中帶“.”的key
      * @author:   
-     * @date:
+     * @date: -06
      * @param tableTable
      * @return List<LinkedHashMap>
      * @throws Exception
@@ -166,7 +161,7 @@ public interface BaseService {
      * @method:toExportExcel
      * @description:導出excel
      * @author:   
-     * @date:
+     * @date: -06
      * @param response
      * @param fileName
      * @param title
