@@ -1,14 +1,4 @@
-/**
- * ======================================================================
- * 版權：
- * 文件：com.odin.rest.service.impl
- * 所含類：BaseServiceImpl
- * 修改記錄
- * 日期				作者					版本				內容
- * ======================================================================
- * 
- * ======================================================================
- */
+
 package com.vic.rest.service.impl;
 
 import java.io.OutputStream;
@@ -72,7 +62,7 @@ import com.vic.rest.vo.Pagination;
  *
  * @author  
  * @version 1.0
- * @date:
+ * @date: -10
  */
 public class BaseServiceImpl implements BaseService {
 
@@ -115,7 +105,7 @@ public class BaseServiceImpl implements BaseService {
      * @method:isMysql
      * @description:判斷數據庫類型
      * @author:   
-     * @date:
+     * @date: -22
      * @return boolean
      */
     public boolean isMysql() {
@@ -128,7 +118,7 @@ public class BaseServiceImpl implements BaseService {
      * @method:selectBySql
      * @description:根據傳入的sql語句查詢
      * @author: 
-     * @date:
+     * @date: -10
      */
     public List<Map> selectBySql(String sql) {
         return this.selectBySql(null, sql);
@@ -141,7 +131,7 @@ public class BaseServiceImpl implements BaseService {
      * @method:selectBySql
      * @description:根據傳入的sql語句查詢
      * @author: 
-     * @date:
+     * @date: -10
      */
     public List<Map> selectBySql(String dbName, String sql) {
         //判斷非空
@@ -174,7 +164,7 @@ public class BaseServiceImpl implements BaseService {
      * @method:selectBySql
      * @description:根據傳入的sql語句查詢
      * @author: 
-     * @date:
+     * @date: -10
      */
     public List<LinkedHashMap> selectBySqlSort(String sql) {
     	return this.selectBySqlSort(null, sql);
@@ -187,7 +177,7 @@ public class BaseServiceImpl implements BaseService {
      * @method:selectBySql
      * @description:根據傳入的sql語句查詢
      * @author: 
-     * @date:
+     * @date: -10
      */
     public List<LinkedHashMap> selectBySqlSort(String dbName, String sql) {
     	//判斷非空
@@ -222,7 +212,7 @@ public class BaseServiceImpl implements BaseService {
      * @method:selectPaginationBySql
      * @description:分頁查詢
      * @author: 
-     * @date:
+     * @date: -24
      */
     @SuppressWarnings("unchecked")
     public Pagination selectPaginationBySql(String sql, final int pageNo, final int pagesize) {
@@ -238,7 +228,7 @@ public class BaseServiceImpl implements BaseService {
      * @method:selectPaginationBySql
      * @description:分頁查詢
      * @author: 
-     * @date:
+     * @date: -24
      */
     @SuppressWarnings("unchecked")
     public Pagination selectPaginationBySql(String dbName, String sql, final int pageNo, final int pagesize) {
@@ -294,7 +284,7 @@ public class BaseServiceImpl implements BaseService {
      * @method:insertBySql
      * @description:插入操作
      * @author:   
-     * @date:
+     * @date: -23
      * @param sql
      * @return
      */
@@ -322,7 +312,7 @@ public class BaseServiceImpl implements BaseService {
      * @method:executeBySql
      * @description:執行sql
      * @author:   
-     * @date:
+     * @date: -30
      * @param sql
      * @return
      */
@@ -343,7 +333,7 @@ public class BaseServiceImpl implements BaseService {
      * @method:removeOrders
      * @description:去掉sql語句中的order排序以提供查詢總條數的效率
      * @author: 
-     * @date:
+     * @date: -24
      */
     private static String removeOrders(String sql) {
         Assert.hasText(sql);
@@ -366,7 +356,7 @@ public class BaseServiceImpl implements BaseService {
      * @method:getLastTable
      * @description:獲取最新的表名
      * @author: 
-     * @date:
+     * @date: -23
      */
     public List<String> getLastTableList(String tableNameLiKe, int num) throws Exception {
         //判斷參數
@@ -402,7 +392,7 @@ public class BaseServiceImpl implements BaseService {
      * @method:getLastTable
      * @description:獲取最新的表名
      * @author: 
-     * @date:
+     * @date: -23
      */
     public String getLastTable(String tableNameLiKe) throws Exception {
         //判斷參數
@@ -456,7 +446,7 @@ public class BaseServiceImpl implements BaseService {
      * @method:getTb
      * @description:獲取表名
      * @author:  
-     * @date:
+     * @date: -27
      */
 	public String getTb(String key) throws Exception {
     	
@@ -487,7 +477,7 @@ public class BaseServiceImpl implements BaseService {
 	 * @method:getRedisUserByToken
 	 * @description:通過token獲取用戶信息
 	 * @author:   
-	 * @date:
+	 * @date: -07
 	 * @param token
 	 * @return LinkedHashMap
 	 */
@@ -509,7 +499,7 @@ public class BaseServiceImpl implements BaseService {
      * @method:changeMapSpot
      * @description:替換map中帶“.”的key
      * @author:   
-     * @date:
+     * @date: -06
      * @param tableTable
      * @return List<LinkedHashMap>
      * @throws Exception
@@ -537,7 +527,7 @@ public class BaseServiceImpl implements BaseService {
      * @method:toExportExcel
      * @description:導出excel
      * @author:   
-     * @date:
+     * @date: -06
      * @param response
      * @param fileName
      * @param title

@@ -200,8 +200,8 @@ public class EOServiceImpl extends BaseServiceImpl implements EOService {
      * @throws Exception
      * @method: getGlobalEOData
      * @description: 獲取料号根据总调度计划各分类的总数和占比
-     * @author: 
-     * @date: 
+     * @author: my.liu(F1333615)
+     * @date: 2018-07-14
      *///(5.01002)
     @Override
     public Map getSearchPparam() throws Exception {
@@ -244,8 +244,8 @@ public class EOServiceImpl extends BaseServiceImpl implements EOService {
      * @throws Exception
      * @method: getGlobalEOData
      * @description: 獲取料号根据总调度计划各分类的总数和占比
-     * @author: 
-     * @date: 
+     * @author: my.liu(F1333615)
+     * @date: 2018-07-14
      *///(5.01)
     @SuppressWarnings("rawtypes")
     @Override
@@ -283,8 +283,8 @@ public class EOServiceImpl extends BaseServiceImpl implements EOService {
      * @throws Exception
      * @method: getGlobalEODashboardData
      * @description: 獲取料号根据总调度计划各分类的总数和占比
-     * @author: 
-     * @date: 
+     * @author: my.liu(F1333615)
+     * @date: 2018-07-14
      *///(5.02)
     @SuppressWarnings("rawtypes")
     @Override
@@ -384,8 +384,8 @@ public class EOServiceImpl extends BaseServiceImpl implements EOService {
      * @throws Exception
      * @method: getGlobalEODashboardInfo
      * @description :獲取Global E&O Dashboard 条形图的TOP10%或TOP20%數據
-     * @author: 
-     * @date: 
+     * @author: my.liu(F1333615)
+     * @date: 2018-07-14
      *///(5.03)
     @SuppressWarnings("rawtypes")
     @Override
@@ -465,8 +465,8 @@ public class EOServiceImpl extends BaseServiceImpl implements EOService {
      * @throws Exception
      * @method: getWeeklyEOTrendData
      * @description: 獲取每个站点的每周E&O趋势
-     * @author:
-     * @date: 
+     * @author: my.liu(F1333615)
+     * @date: 2018-07-14
      *///(5.04)
     @SuppressWarnings("rawtypes")
     @Override
@@ -527,8 +527,8 @@ public class EOServiceImpl extends BaseServiceImpl implements EOService {
      * @throws Exception
      * @method: getWeeklyEOData
      * @description: 獲取每个站点的三种E&O状态（Excess、Obsolete、Optimal）的数量
-     * @author: 
-     * @date: 
+     * @author: my.liu(F1333615)
+     * @date: 2018-07-14
      *///(5.05 ok)
     @SuppressWarnings("rawtypes")
     @Override
@@ -633,8 +633,8 @@ public class EOServiceImpl extends BaseServiceImpl implements EOService {
      * @throws Exception
      * @method: getWeeklyEOInfo
      * @description: 獲取Weekly E&O詳細數據
-     * @author: 
-     * @date: 
+     * @author: my.liu(F1333615)
+     * @date: 2018-07-14
      *///(5.06 ok)
     @SuppressWarnings("rawtypes")
     @Override
@@ -1141,8 +1141,8 @@ public class EOServiceImpl extends BaseServiceImpl implements EOService {
      * @throws Exception
      * @method: getPONumberInfo
      * @description: 獲取每个物料的PO Number(action)的詳細數據
-     * @author: 
-     * @date: 
+     * @author: my.liu(F1333615)
+     * @date: 2018-07-14
      *///(5.07)
     @SuppressWarnings("rawtypes")
     @Override
@@ -1229,8 +1229,8 @@ public class EOServiceImpl extends BaseServiceImpl implements EOService {
      * @throws Exception
      * @method: getQuarterlyReserveData
      * @description: 獲取各个Site的季度性的E&O储备的数量
-     * @author: 
-     * @date: 
+     * @author: my.liu(F1333615)
+     * @date: 2018-07-14
      *///(5.08 ok)
     @SuppressWarnings("rawtypes")
     @Override
@@ -1302,7 +1302,7 @@ public class EOServiceImpl extends BaseServiceImpl implements EOService {
      * @method:returnExcelStream
      * @description:将报表导出excel
      * @author:
-     * @date:
+     * @date:2018/8/20
      * @param:[type, pagination, response]
      * @return: void
      */
@@ -1334,7 +1334,7 @@ public class EOServiceImpl extends BaseServiceImpl implements EOService {
      * @method:returnExcelStream
      * @description:
      * @author:
-     * @date:
+     * @date:2018/8/20
      * @param:[type, pagination, response]
      * @return: void
      */
@@ -1362,7 +1362,7 @@ public class EOServiceImpl extends BaseServiceImpl implements EOService {
      * @method:returnExcelStream
      * @description:
      * @author:
-     * @date:
+     * @date:2018/8/20
      * @param:[type, pagination, response]
      * @return: void
      */
