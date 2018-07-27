@@ -1,12 +1,12 @@
 /**
  * ======================================================================
- * 版權：
+ * 版權：富士康工業互聯網股份有限公司 平臺解決方案事業處 版權所有 (c) 2018
  * 文件：util
  * 所含類：CommonUtil
  * 修改記錄
  * 日期				作者					版本				內容
  * ======================================================================
- * 
+ * 2018-06-30		zn.xie(F1334993)	V1.0			新建
  * ======================================================================
  */
 package com.vic.rest.util;
@@ -29,9 +29,9 @@ import org.apache.commons.lang3.StringUtils;
  * <p>Copyright:Copyright (c) 2018</p>
  * <p>Company:Foxconn</p>
  *
- * @author  
+ * @author zn.xie(F1334993)
  * @version 1.0
- * @date:
+ * @date:2018-06-30
  */
 public class CommonUtil {
 
@@ -40,8 +40,8 @@ public class CommonUtil {
      * @return
      * @method:getIP
      * @description:獲取用戶ip地址
-     * @author: 
-     * @date:
+     * @author:zn.xie(F1334993)
+     * @date:2018-06-30
      */
     public static String getIP(HttpServletRequest request) {
         String ip = "";
@@ -63,8 +63,8 @@ public class CommonUtil {
      * @return
      * @method:getDateStr
      * @description:獲取格式化日期
-     * @author: 
-     * @date:
+     * @author:zn.xie(F1334993)
+     * @date:2018-06-30
      */
     public static String getDateStr(Date date) {
         String dateStr = "";
@@ -79,8 +79,8 @@ public class CommonUtil {
      * @return
      * @method:getDateStr
      * @description:獲取格式化日期
-     * @author: 
-     * @date:
+     * @author:zn.xie(F1334993)
+     * @date:2018-06-30
      */
     public static String getDateStr() {
         return getDateStr(new Date());
@@ -91,8 +91,8 @@ public class CommonUtil {
      * @return
      * @method:getDateTimeStr
      * @description:獲取格式化時間
-     * @author: 
-     * @date:
+     * @author:zn.xie(F1334993)
+     * @date:2018-06-30
      */
     public static String getDateTimeStr(Date date) {
         String dateStr = "";
@@ -107,8 +107,8 @@ public class CommonUtil {
      * @return
      * @method:getDateTimeStr
      * @description:獲取格式化時間
-     * @author: 
-     * @date:
+     * @author:zn.xie(F1334993)
+     * @date:2018-06-30
      */
     public static String getDateTimeStr() {
         return getDateTimeStr(new Date());
@@ -119,8 +119,8 @@ public class CommonUtil {
      * @return
      * @method:getYear
      * @description:獲取年
-     * @author: 
-     * @date:
+     * @author:zn.xie(F1334993)
+     * @date:2018-06-30
      */
     public static int getYear(Date date) {
         Calendar cld = Calendar.getInstance();
@@ -133,8 +133,8 @@ public class CommonUtil {
      * @return
      * @method:getMonth
      * @description:獲取月份
-     * @author: 
-     * @date:
+     * @author:zn.xie(F1334993)
+     * @date:2018-06-30
      */
     public static int getMonth(Date date) {
         Calendar cld = Calendar.getInstance();
@@ -147,8 +147,8 @@ public class CommonUtil {
      * @return
      * @method:getDay
      * @description:獲取星期幾
-     * @author: 
-     * @date:
+     * @author:zn.xie(F1334993)
+     * @date:2018-06-30
      */
     public static int getDay(Date date) {
         Calendar cld = Calendar.getInstance();
@@ -161,8 +161,8 @@ public class CommonUtil {
      * @return
      * @method:getHour
      * @description:獲取小時
-     * @author: 
-     * @date:
+     * @author:zn.xie(F1334993)
+     * @date:2018-06-30
      */
     public static int getHour(Date date) {
         Calendar cld = Calendar.getInstance();
@@ -175,8 +175,8 @@ public class CommonUtil {
      * @return
      * @method:getMinute
      * @description:獲取分
-     * @author: 
-     * @date:
+     * @author:zn.xie(F1334993)
+     * @date:2018-06-30
      */
     public static int getMinute(Date date) {
         Calendar cld = Calendar.getInstance();
@@ -189,8 +189,8 @@ public class CommonUtil {
      * @return
      * @method:getSecond
      * @description:獲取秒
-     * @author: 
-     * @date:
+     * @author:zn.xie(F1334993)
+     * @date:2018-06-30
      */
     public static int getSecond(Date date) {
         Calendar cld = Calendar.getInstance();
@@ -203,8 +203,8 @@ public class CommonUtil {
      * @return
      * @method:isNotEmpty
      * @description:判斷list非空
-     * @author: 
-     * @date:
+     * @author:zn.xie(F1334993)
+     * @date:2018-06-30
      */
     public static boolean isNotEmpty(List list) {
         return null != list && !list.isEmpty() ? true : false;
@@ -215,8 +215,8 @@ public class CommonUtil {
      * @return
      * @method:isEmpty
      * @description:判斷list為空
-     * @author: 
-     * @date:
+     * @author:zn.xie(F1334993)
+     * @date:2018-06-30
      */
     public static boolean isEmpty(List list) {
         return null == list || list.isEmpty() ? true : false;
@@ -227,8 +227,8 @@ public class CommonUtil {
      * @return
      * @method:isNotEmpty
      * @description:判斷數據非空
-     * @author: 
-     * @date:
+     * @author:zn.xie(F1334993)
+     * @date:2018-07-04
      */
     public static boolean isNotEmpty(Object[] objs) {
         return null != objs && objs.length != 0 ? true : false;
@@ -239,8 +239,8 @@ public class CommonUtil {
      * @return
      * @method:isEmpty
      * @description:判斷數據為空
-     * @author: 
-     * @date:
+     * @author:zn.xie(F1334993)
+     * @date:2018-07-04
      */
     public static boolean isEmpty(Object[] objs) {
         return null == objs || objs.length == 0 ? true : false;
@@ -249,8 +249,8 @@ public class CommonUtil {
     /**
      * @method:isNotEmptyMapValue
      * @description:判斷map值非空
-     * @author:   
-     * @date:
+     * @author:zn.xie(F1334993)  
+     * @date:2018-11-22
      * @param map
      * @param key
      * @return boolean
@@ -262,8 +262,8 @@ public class CommonUtil {
     /**
      * @method:isEmptyMapValue
      * @description:判斷map值為空
-     * @author:   
-     * @date:
+     * @author:zn.xie(F1334993)  
+     * @date:2018-11-22
      * @param map
      * @param key
      * @return boolean
@@ -277,8 +277,8 @@ public class CommonUtil {
      * @return
      * @method:checkCode
      * @description:檢查編碼是否只包含大小寫字母、下劃線
-     * @author: 
-     * @date:
+     * @author:zn.xie(F1334993)
+     * @date:2018-06-30
      */
     public static boolean checkCode(String code) {
         if (StringUtils.isEmpty(code)) return false;
@@ -289,8 +289,8 @@ public class CommonUtil {
     /**
      * @method:ListToString
      * @description:将数组转化为sql查询条件
-     * @author:
-     * @date:
+     * @author:yq.xiao(F1333250)
+     * @date:2018/7/25
      * @param:[list]
      * @return:java.lang.String
      */
@@ -321,8 +321,8 @@ public class CommonUtil {
     /**
      * @method:isNumber
      * @description:判断字符串是否为数字,包括浮点数
-     * @author:
-     * @date:
+     * @author:yq.xiao(F1333250)
+     * @date:2018/8/3
      * @param:[str]
      * @return:boolean
      */
@@ -342,8 +342,8 @@ public class CommonUtil {
      * @return String
      * @method:ArrayToString
      * @description:數組轉sql字符串
-     * @author: 
-     * @date:
+     * @author:zn.xie(F1334993)
+     * @date:2018-07-24
      */
     public static String ArrayToString(Object[] a) {
         if (a == null)
@@ -368,8 +368,8 @@ public class CommonUtil {
      * @return String
      * @method:ArrayToString
      * @description:list轉sql字符串
-     * @author: 
-     * @date:
+     * @author:zn.xie(F1334993)
+     * @date:2018-07-24
      */
     public static String ArrayToString(List a) {
     	if (a == null)
@@ -392,8 +392,8 @@ public class CommonUtil {
     /**
      * @method:escapeSQLLike
      * @description:與sql防注入相關
-     * @author:   
-     * @date:
+     * @author:zn.xie(F1334993)  
+     * @date:2018-09-21
      * @param likeStr
      * @param escapeStr
      * @return String
@@ -413,8 +413,8 @@ public class CommonUtil {
     /**
 	 * @method:changeSpecialCharacter
 	 * @description:轉化特殊字符
-	 * @author:   
-	 * @date:
+	 * @author:zn.xie(F1334993)  
+	 * @date:2018-11-29
 	 * @param str
 	 * @return
 	 */
@@ -429,8 +429,8 @@ public class CommonUtil {
 	/**
 	 * @method:changeSpecialCharacter
 	 * @description:轉化特殊字符
-	 * @author:   
-	 * @date:
+	 * @author:zn.xie(F1334993)  
+	 * @date:2018-11-29
 	 * @param str
 	 * @return
 	 */
