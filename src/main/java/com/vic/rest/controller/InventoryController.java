@@ -1,13 +1,4 @@
-/**======================================================================
- * 版權：
- * 文件：com.vic.rest.controller
- * 所含類：InventotyController 
- * 修改記錄
- * 日期				作者					版本				內容
- * ======================================================================
- * 
- * ======================================================================
- */
+
 package com.vic.rest.controller;
 
 import java.util.ArrayList;
@@ -15,17 +6,14 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import javax.servlet.http.HttpServletResponse;
 
-import java.util.Map.Entry;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.mybatis.spring.MyBatisSystemException;
-import org.springframework.aop.ThrowsAdvice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -42,16 +30,7 @@ import com.vic.rest.util.DateTimeUtil;
 import com.vic.rest.vo.OdinResult;
 import com.vic.rest.vo.Pagination;
 
-/**
- * <p>Titile:InventotyController</p>
- * <p>ProjectName:odin</p>
- * <p>Description:TODO </p>
- * <p>Copyright:Copyright (c) 2018</p>
- * <p>Company:Foxconn</p>
- * @author  
- * @date:
- * @version 1.0
- */
+
 @Controller
 @RequestMapping("/inventory")
 public class InventoryController extends BaseController{

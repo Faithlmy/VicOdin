@@ -1,19 +1,7 @@
-/**
- * ======================================================================
- * 版權：
- * 文件：com.vic.rest.controller
- * 所含類：BaseController
- * 修改記錄
- * 日期				作者					版本				內容
- * ======================================================================
- *
- * ======================================================================
- */
 package com.vic.rest.controller;
 
 import java.util.Date;
 import java.util.LinkedHashMap;
-import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -30,16 +18,7 @@ import com.vic.rest.util.DateTimeUtil;
 import com.vic.rest.vo.LoginUser;
 import com.vic.rest.vo.OdinResult;
 
-/**
- * <p>Titile:BaseController</p>
- * <p>ProjectName:odin-rest</p>
- * <p>Description:基本控制器類，提供部分公用方法 </p>
- * <p>Copyright:Copyright (c) 2018</p>
- * <p>Company:Foxconn</p>
- * @author  
- * @date: -28
- * @version 1.0
- */
+
 public class BaseController {
 	
 	@Value("${user.session.key}")
@@ -47,8 +26,6 @@ public class BaseController {
 	
 	@Resource
 	private UserService userService;
-
-    
 
     /**
      * @method:success
