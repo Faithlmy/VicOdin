@@ -12,10 +12,10 @@ import com.vic.rest.vo.Pagination;
 
 /**
  * <p>Titile:UserService</p>
- * <p>ProjectName:odin</p>
+ * <p>ProjectName:</p>
  * <p>Description:TODO </p>
  * <p>Copyright:Copyright (c) 2018</p>
- * <p>Company:Foxconn</p>
+ * <p>Company:</p>
  *
  * @author  
  * @version 1.0
@@ -202,7 +202,7 @@ public interface UserService extends BaseService {
      * @param configureUser
      * @method:savaConfigure
      * @description:保存configure的信息
-     * @author: my.liu(F1333615)
+     * @author:  
      * @date: -07
      */
     public ConfigureUser saveConfigure(String username, ConfigureUser configureUser) throws Exception;
@@ -211,14 +211,11 @@ public interface UserService extends BaseService {
      * @param configureUser
      * @method:savaConfigure
      * @description:保存configure的信息
-     * @author: my.liu(F1333615)
+     * @author:  
      * @date: -07
      */
     public ConfigureUser getConfigure(String username) throws Exception;
-
-    /*======================== write by xyq 2018.11.30 start ========================*/
     public String checkPNExists(String partNumber);
 
     public void updateProject(String partNumber, String projectCode,String username) throws Exception ;
-    /*======================== write by xyq 2018.11.30 end ========================*/
 }

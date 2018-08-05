@@ -2,23 +2,19 @@
 package com.vic.rest.service;
 
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.commons.lang3.StringUtils;
-
-import com.vic.rest.util.CommonUtil;
 import com.vic.rest.vo.Pagination;
 
 /**
  * <p>Titile:HomeService</p>
- * <p>ProjectName:odin</p>
+ * <p>ProjectName:</p>
  * <p>Description:TODO </p>
  * <p>Copyright:Copyright (c) 2018</p>
- * <p>Company:Foxconn</p>
+ * <p>Company:</p>
  * @author  
  * @date: -14
  * @version 1.0
@@ -230,7 +226,7 @@ public interface InventoryService extends BaseService {
 	 * @method:getInventoryTrendData
 	 * @description:獲取最近14个月的库存实际值和目标值
 	 * @author:   
-	 * @date:2018-01-11
+	 * @date: -11
 	 * @param site
 	 * @param bu
 	 * @return List<Map>
@@ -242,7 +238,7 @@ public interface InventoryService extends BaseService {
 	 * @method:getInventoryTrendInfo
 	 * @description:獲取实际库存和目标库存在各仓库中的数量以及总量
 	 * @author:   
-	 * @date:2018-01-11
+	 * @date: -11
 	 * @param site
 	 * @param bu
 	 * @param dateType
@@ -342,5 +338,4 @@ public interface InventoryService extends BaseService {
 	 * @throws Exception
 	 */
 	public List getBuParam(String tableName) throws Exception;
-    /*======================== 查詢參數方法 by zn.xie 20180815 end ========================*/
 }
