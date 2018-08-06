@@ -4,20 +4,10 @@ package com.vic.rest.vo;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.logging.SimpleFormatter;
 
 import org.apache.commons.lang3.StringUtils;
 
-/**
- * <p>Titile:ACUser</p>
- * <p>ProjectName:odin</p>
- * <p>Description:TODO </p>
- * <p>Copyright:Copyright (c) 2018</p>
- * <p>Company:Foxconn</p>
- * @author zn.xie(F1334993)
- * @date:2018-07-31
- * @version 1.0
- */
+
 public class ACUser {
 
 	private String ext;
