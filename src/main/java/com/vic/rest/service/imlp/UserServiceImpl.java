@@ -17,7 +17,6 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.TimeZone;
 
-import javax.servlet.http.HttpUtils;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
@@ -33,43 +32,30 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
-import com.alibaba.druid.support.json.JSONUtils;
-//import com.vic.rest.constant.BaseConstant;
-//import com.vic.rest.controller.HomeController;
-//import com.vic.rest.controller.UserController;
-//import com.vic.rest.dao.JedisClient;
-//import com.vic.rest.mapper.odin.AuthUserGroupsMapper;
-//import com.vic.rest.mapper.odin.AuthUserMapper;
-//import com.vic.rest.mapper.odin.UserLoginMessageMapper;
-//import com.vic.rest.pojo.AuthUser;
-//import com.vic.rest.pojo.AuthUserExample;
-//import com.vic.rest.pojo.AuthUserExample.Criteria;
-//import com.vic.rest.pojo.AuthUserGroups;
-//import com.vic.rest.pojo.ConfigureUser;
-//import com.vic.rest.pojo.UserLoginMessage;
+import com.vic.rest.constant.BaseConstant;
+import com.vic.rest.controller.UserController;
+import com.vic.rest.dao.JedisClient;
+import com.vic.rest.mapper.odin.AuthUserGroupsMapper;
+import com.vic.rest.mapper.odin.AuthUserMapper;
+import com.vic.rest.mapper.odin.UserLoginMessageMapper;
+import com.vic.rest.pojo.AuthUser;
+import com.vic.rest.pojo.AuthUserExample;
+import com.vic.rest.pojo.AuthUserExample.Criteria;
+import com.vic.rest.pojo.AuthUserGroups;
+import com.vic.rest.pojo.ConfigureUser;
+import com.vic.rest.pojo.UserLoginMessage;
 import com.vic.rest.service.UserService;
-//import com.vic.rest.util.CommonUtil;
-//import com.vic.rest.util.DateTimeUtil;
-//import com.vic.rest.util.HttpClientUtil;
-//import com.vic.rest.util.JsonUtil;
-//import com.vic.rest.util.SHA256Util;
-//import com.vic.rest.vo.ACUser;
-//import com.vic.rest.vo.ACUserResp;
-//import com.vic.rest.vo.CheckToken;
-//import com.vic.rest.vo.OdinResult;
-//import com.vic.rest.vo.Pagination;
+import com.vic.rest.util.CommonUtil;
+import com.vic.rest.util.DateTimeUtil;
+import com.vic.rest.util.HttpClientUtil;
+import com.vic.rest.util.JsonUtil;
+import com.vic.rest.util.SHA256Util;
+import com.vic.rest.vo.ACUser;
+import com.vic.rest.vo.ACUserResp;
+import com.vic.rest.vo.CheckToken;
+import com.vic.rest.vo.Pagination;
 
-/**
- * <p>Titile:UserServiceImpl</p>
- * <p>ProjectName:odin</p>
- * <p>Description:TODO </p>
- * <p>Copyright:Copyright (c) 2018</p>
- * <p>Company:Foxconn</p>
- *
- * @author  
- * @version 1.0
- * @date: -28
- */
+
 @Service
 public class UserServiceImpl extends BaseServiceImpl implements UserService {
 
@@ -894,7 +880,7 @@ public class UserServiceImpl extends BaseServiceImpl implements UserService {
      * @param configureUser
      * @method:savaConfigure
      * @description:保存configure的信息
-     * @author: my.liu(F1333615)
+     * @author: 
      * @date: -07
      */
     @Override
@@ -1136,8 +1122,6 @@ public class UserServiceImpl extends BaseServiceImpl implements UserService {
         return configureUser;
     }
 
-
-    /*======================== write by xyq 2018.11.30 start ========================*/
     //如名
     @Override
     public String checkPNExists(String partNumber) {

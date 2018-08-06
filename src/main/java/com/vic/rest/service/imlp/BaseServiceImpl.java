@@ -3,7 +3,6 @@ package com.vic.rest.service.impl;
 
 import java.io.OutputStream;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -15,55 +14,25 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.lang3.StringUtils;
-import org.apache.poi.hssf.usermodel.DVConstraint;
-import org.apache.poi.hssf.usermodel.HSSFCell;
-import org.apache.poi.hssf.usermodel.HSSFDataValidation;
-import org.apache.poi.hssf.usermodel.HSSFName;
-import org.apache.poi.hssf.usermodel.HSSFRichTextString;
-import org.apache.poi.hssf.usermodel.HSSFRow;
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.usermodel.DataValidationConstraint.ValidationType;
-import org.apache.poi.ss.usermodel.DataValidationHelper;
-import org.apache.poi.ss.usermodel.Name;
-import org.apache.poi.ss.util.CellRangeAddressList;
 import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFDataValidation;
-import org.apache.poi.xssf.usermodel.XSSFDataValidationConstraint;
-import org.apache.poi.xssf.usermodel.XSSFDataValidationHelper;
-import org.apache.poi.xssf.usermodel.XSSFName;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.openxmlformats.schemas.spreadsheetml.x2006.main.CTDataValidation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.util.Assert;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import com.vic.rest.constant.BaseConstant;
-import com.vic.rest.controller.InventoryController;
 import com.vic.rest.dao.JedisClient;
 import com.vic.rest.mapper.odin.CommonMapper;
 import com.vic.rest.mapper.otd.TestDataMapper;
 import com.vic.rest.service.BaseService;
 import com.vic.rest.util.CommonUtil;
 import com.vic.rest.util.JsonUtil;
-import com.vic.rest.vo.LoginUser;
 import com.vic.rest.vo.Pagination;
 
-/**
- * <p>Titile:BaseServiceImpl</p>
- * <p>ProjectName:odin</p>
- * <p>Description:TODO </p>
- * <p>Copyright:Copyright (c) 2018</p>
- * <p>Company:Foxconn</p>
- *
- * @author  
- * @version 1.0
- * @date: -10
- */
+
 public class BaseServiceImpl implements BaseService {
 
     @Autowired
@@ -78,25 +47,25 @@ public class BaseServiceImpl implements BaseService {
     /**
      * sql常量
      */
-    @Value("${jdbc.driver}")
-    public String JDBC_DRIVER;
+//    @Value("${jdbc.driver}")
+    public String JDBC_DRIVER = "com.mysql.jdbc.Driver";
     //limit
     public String SQL_LIMIT = " limit PAGE_SIZE OFFSET START_COUNT ";
     //TABLE_NAME
     public String SQL_TABLE_NAME = "";
 
-    @Value("${otd.jdbc.url}")
-    public String URL;
-    @Value("${otd.jdbc.username}")
-    public String USER;
-    @Value("${otd.jdbc.password}")
-    public String PASSWORD;
-    @Value("${user.session.key}")
-	private String USER_SESSION_KEY;
-    @Value("${user.session.expire}")
-	private Integer USER_SESSION_EXPIRE;
-    @Value("${user.datasource.key}")
-	private String ODIN_USER_DATASOURCE;
+//    @Value("${otd.jdbc.url}")
+    public String URL = "jdbc:postgresql://***.***.***.***:1234/odin_test_data";
+//    @Value("${otd.jdbc.username}")
+    public String USER = "postgres";
+//    @Value("${otd.jdbc.password}")
+    public String PASSWORD = "1Bxpia2a456789";
+//    @Value("${user.session.key}")
+	private String USER_SESSION_KEY  = "ODIN_USER_TOKEN";
+//    @Value("${user.session.expire}")
+	private Integer USER_SESSION_EXPIRE = 1800;
+//    @Value("${user.datasource.key}")
+	private String ODIN_USER_DATASOURCE = "ODIN_USER_DATASOURCE";
 
     public int SUCCESS = 1;
     public int ERROR = 0;

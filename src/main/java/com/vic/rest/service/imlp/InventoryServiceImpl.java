@@ -21,7 +21,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.DateUtils;
-import org.apache.http.cookie.SM;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.FillPatternType;
 import org.apache.poi.ss.usermodel.IndexedColors;
@@ -42,21 +41,9 @@ import com.vic.rest.controller.InventoryController;
 import com.vic.rest.service.InventoryService;
 import com.vic.rest.util.CommonUtil;
 import com.vic.rest.util.DateTimeUtil;
-import com.vic.rest.util.JsonUtil;
-import com.vic.rest.vo.CellColumn;
 import com.vic.rest.vo.Pagination;
-import com.sun.org.apache.xml.internal.security.Init;
 
-/**
- * <p>Titile:InventoryServiceImpl</p>
- * <p>ProjectName:odin</p>
- * <p>Description:TODO </p>
- * <p>Copyright:Copyright (c) 2018</p>
- * <p>Company:Foxconn</p>
- * @author zn.xie(F1334993)
- * @date:2018-07-25
- * @version 1.0
- */
+
 @Service
 public class InventoryServiceImpl extends BaseServiceImpl implements InventoryService {
 	
@@ -133,8 +120,8 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:Oh_Health
 	 * @description:獲取Oh_Health數據
-	 * @author:zn.xie(F1334993)
-	 * @date:2018-07-14
+	 * @author: 
+	 * @date: -14
 	 * @param site
 	 * @param bu
 	 * @return Map
@@ -169,8 +156,8 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:getUnderBreakData
 	 * @description:獲取Under Break Down的數據
-	 * @author:zn.xie(F1334993)
-	 * @date:2018-07-21
+	 * @author: 
+	 * @date: -21
 	 * @param site
 	 * @param bu
 	 * @return List<Map>
@@ -202,8 +189,8 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:getOverBreakData
 	 * @description:獲取Over Break Down的數據
-	 * @author:zn.xie(F1334993)
-	 * @date:2018-07-21
+	 * @author: 
+	 * @date: -21
 	 * @param site
 	 * @param bu
 	 * @return List<Map>
@@ -235,8 +222,8 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:getOhStatusInfo
 	 * @description:獲取Oh Status三個圖標的詳細數據
-	 * @author:zn.xie(F1334993)
-	 * @date:2018-07-24
+	 * @author: 
+	 * @date: -24
 	 * @param ohHealthStatus
 	 * @param ohHealthRootcause
 	 * @param site
@@ -370,8 +357,8 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:formatOHMoney
 	 * @description:金額格式化
-	 * @author:zn.xie(F1334993)  
-	 * @date:2018-08-22
+	 * @author:   
+	 * @date: -22
 	 * @param money
 	 * @return
 	 */
@@ -391,8 +378,8 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:formatOHQty
 	 * @description:數量格式化
-	 * @author:zn.xie(F1334993)  
-	 * @date:2018-08-22
+	 * @author:   
+	 * @date: -22
 	 * @param money
 	 * @return
 	 */
@@ -412,8 +399,8 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:getPipelineHealthData
 	 * @description:獲取Pipeline_Health部分的數據
-	 * @author:zn.xie(F1334993)
-	 * @date:2018-07-21
+	 * @author: 
+	 * @date: -21
 	 * @return List<Map>
 	 * @throws Exception
 	 */
@@ -444,8 +431,8 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:getCT2RData
 	 * @description:獲取CT2R數據
-	 * @author:zn.xie(F1334993)
-	 * @date:2018-07-21
+	 * @author: 
+	 * @date: -21
 	 * @return List<Map>
 	 * @throws Exception
 	 */
@@ -474,8 +461,8 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:getDemandData
 	 * @description:獲取Demand數據
-	 * @author:zn.xie(F1334993)
-	 * @date:2018-07-21
+	 * @author: 
+	 * @date: -21
 	 * @return List<Map>
 	 * @throws Exception
 	 */
@@ -504,7 +491,7 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:getPipelineHealthInfo
 	 * @description:獲取管道库存健康的详细信息
-	 * @author:zn.xie(F1334993)
+	 * @author: 
 	 * @param pipelineHealthStatus
 	 * @param site
 	 * @param bu
@@ -514,7 +501,7 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	 * @param curPageNum
 	 * @param pageSize
 	 * @param isExport
-	 * @date:2018-07-21
+	 * @date: -21
 	 * @return List<Map>
 	 * @throws Exception
 	 */
@@ -599,8 +586,8 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:getPlHealthData
 	 * @description:獲取Pipeline_Health數據
-	 * @author:zn.xie(F1334993)
-	 * @date:2018-07-16
+	 * @author: 
+	 * @date: -16
 	 * @param site
 	 * @param bu
 	 * @return List<Map>
@@ -635,8 +622,8 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:getInventoryTargetData
 	 * @description:獲取实际库存和目标库存在各仓库中的数量以及总量
-	 * @author:zn.xie(F1334993)
-	 * @date:2018-07-21
+	 * @author: 
+	 * @date: -21
 	 * @param site
 	 * @param bu
 	 * @return List<Map>
@@ -672,8 +659,8 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:getInventoryTargetInfo
 	 * @description:实际库存和目标库存在各仓库中的数量以及总量
-	 * @author:zn.xie(F1334993)
-	 * @date:2018-07-21
+	 * @author: 
+	 * @date: -21
 	 * @return Map
 	 * @throws Exception
 	 */
@@ -760,8 +747,8 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:getInventoryTargetInfoSql
 	 * @description:根據條件獲取sql
-	 * @author:zn.xie(F1334993)
-	 * @date:2018-07-25
+	 * @author: 
+	 * @date: -25
 	 * @param site
 	 * @param bu
 	 * @param ltn
@@ -880,8 +867,8 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:getInventoryTargetList
 	 * @description:獲取实际库存和目标库存在各仓库中的数量以及总量
-	 * @author:zn.xie(F1334993)
-	 * @date:2018-07-25
+	 * @author: 
+	 * @date: -25
 	 * @param category
 	 * @param site
 	 * @param bu
@@ -1090,8 +1077,8 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:getPullListValue
 	 * @description:TODO
-	 * @author:zn.xie(F1334993)  
-	 * @date:2018-08-24
+	 * @author:   
+	 * @date: -24
 	 * @param typeName
 	 * @return List<String>
 	 */ 
@@ -1118,8 +1105,8 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:saveInventoryTargetFeedback
 	 * @description:保存target 的 feedback
-	 * @author:zn.xie(F1334993)  
-	 * @date:2018-08-23
+	 * @author:   
+	 * @date: -23
 	 * @param id
 	 * @param rootCause
 	 * @param comments
@@ -1163,8 +1150,8 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:odinFileUploadReview
 	 * @description:導入/預覽
-	 * @author:zn.xie(F1334993)  
-	 * @date:2018-10-25
+	 * @author:   
+	 * @date: -25
 	 * @param inputStream
 	 * @param tableName
 	 * @param title
@@ -1279,8 +1266,8 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:changeSpecialCharacter
 	 * @description:轉化特殊字符
-	 * @author:zn.xie(F1334993)  
-	 * @date:2018-11-29
+	 * @author:   
+	 * @date: -29
 	 * @param str
 	 * @return
 	 */
@@ -1295,8 +1282,8 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:getCellDate
 	 * @description:獲取cell的時間
-	 * @author:zn.xie(F1334993)  
-	 * @date:2018-10-25
+	 * @author:   
+	 * @date: -25
 	 * @param value
 	 * @return
 	 */
@@ -1320,7 +1307,7 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:getInventoryTrendData
 	 * @description:獲取最近14个月的库存实际值和目标值
-	 * @author:zn.xie(F1334993)  
+	 * @author:   
 	 * @date:2018-01-11
 	 * @param site
 	 * @param bu
@@ -1358,8 +1345,8 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:getInventoryTrendAxis
 	 * @description:獲取Inventory Trend圖表顯示列名
-	 * @author:zn.xie(F1334993)  
-	 * @date:2018-08-11
+	 * @author:   
+	 * @date: -11
 	 * @param dateType
 	 * @return List<String>
 	 */
@@ -1461,8 +1448,8 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:getInventoryTrendInfo
 	 * @description:獲取实际库存和目标库存在各仓库中的数量以及总量
-	 * @author:zn.xie(F1334993)
-	 * @date:2018-07-26
+	 * @author: 
+	 * @date: -26
 	 * @param site
 	 * @param bu
 	 * @param dateType
@@ -1522,8 +1509,8 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:getHomeInventoryTrendInfo
 	 * @description:獲取首頁Inventory Trend圖表數據
-	 * @author:zn.xie(F1334993)  
-	 * @date:2018-09-03
+	 * @author:   
+	 * @date: -03
 	 * @param site
 	 * @param bu
 	 * @return List<Map>
@@ -1563,8 +1550,8 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:getInventoryTurnsData
 	 * @description:獲取儀錶盤數據
-	 * @author:zn.xie(F1334993)
-	 * @date:2018-07-17
+	 * @author: 
+	 * @date: -17
 	 * @param site
 	 * @param bu
 	 * @return Double
@@ -1660,8 +1647,8 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:getInventoryTurnsInfo
 	 * @description:TODO
-	 * @author:zn.xie(F1334993)  
-	 * @date:2018-08-23
+	 * @author:   
+	 * @date: -23
 	 * @param site
 	 * @param bu
 	 * @return
@@ -1720,8 +1707,8 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:getInventoryTurnsList
 	 * @description:TODO
-	 * @author:zn.xie(F1334993)  
-	 * @date:2018-08-23
+	 * @author:   
+	 * @date: -23
 	 * @param site
 	 * @param bu
 	 * @return
@@ -1825,8 +1812,8 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:getInventoryTurnsInfoData
 	 * @description:TODO
-	 * @author:zn.xie(F1334993)  
-	 * @date:2018-08-23
+	 * @author:   
+	 * @date: -23
 	 * @param site
 	 * @param bu
 	 * @return
@@ -1870,8 +1857,8 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:getInventoryTurnsInfoData
 	 * @description:TODO
-	 * @author:zn.xie(F1334993)  
-	 * @date:2018-08-23
+	 * @author:   
+	 * @date: -23
 	 * @param site
 	 * @param bu
 	 * @return
@@ -1893,8 +1880,8 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:ListToMap
 	 * @description:將查詢結果的list轉化成map
-	 * @author:zn.xie(F1334993)  
-	 * @date:2018-09-18
+	 * @author:   
+	 * @date: -18
 	 * @param list
 	 * @param keyword
 	 * @return
@@ -1913,8 +1900,8 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:getInventoryTurnsInfoDate
 	 * @description:獲取一些Inventory Turns Info的常量數組
-	 * @author:zn.xie(F1334993)  
-	 * @date:2018-08-23
+	 * @author:   
+	 * @date: -23
 	 * @return Map<String, List<String>>
 	 * @throws Exception 
 	 */
@@ -2012,8 +1999,8 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:toExportExcel
 	 * @description:導出excel
-	 * @author:zn.xie(F1334993)  
-	 * @date:2018-08-21
+	 * @author:   
+	 * @date: -21
 	 * @param type
 	 * @param pager
 	 * @param response
@@ -2113,13 +2100,12 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
         xssfWorkbook.write(outputStream);
         outputStream.close();
     }
-	
-    /*======================== 查詢參數方法 by zn.xie 20180815 start ========================*/
+
 	/**
 	 * @method:getSiteParam
 	 * @description:查詢獲取site參數
-	 * @author:zn.xie(F1334993)  
-	 * @date:2018-08-14
+	 * @author:   
+	 * @date: -14
 	 * @param tableName
 	 * @return List
 	 * @throws Exception
@@ -2131,8 +2117,8 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:getBuParam
 	 * @description:查詢獲取bu參數
-	 * @author:zn.xie(F1334993)  
-	 * @date:2018-08-14
+	 * @author:   
+	 * @date: -14
 	 * @param tableName
 	 * @return List
 	 * @throws Exception
@@ -2144,8 +2130,8 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 	/**
 	 * @method:getParam
 	 * @description:TODO
-	 * @author:zn.xie(F1334993)  
-	 * @date:2018-08-15
+	 * @author:   
+	 * @date: -15
 	 * @param tableName
 	 * @param columnName
 	 * @param searchName
@@ -2157,7 +2143,6 @@ public class InventoryServiceImpl extends BaseServiceImpl implements InventorySe
 		sql.append("select " + columnName + " " + searchName + " from " + tableName + " group by " + columnName + " order by " + columnName);
 		return this.selectBySql(sql.toString());
 	}
-    /*======================== 查詢參數方法 by zn.xie 20180815 end ========================*/
 	public static void main(String[] args) {
 		String[] mNames = new String[] { "Jan'", "Feb'", "Mar'", "Apr'", "May'", "Jun'", "Jul'", "Aug'", "Sep'", "Oct'", "Nov'", "Dec'" };
 		List<String> title = new ArrayList<String>();
