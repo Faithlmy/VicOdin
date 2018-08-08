@@ -1,28 +1,10 @@
-/**======================================================================
- * 版權：
- * 文件：com.odin.rest.constant
- * 所含類：BaseConstant 
- * 修改記錄
- * 日期				作者					版本				內容
- * ======================================================================
- * 
- * ======================================================================
- */
+
 package com.vic.rest.vo;
 
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * <p>Titile:BaseConstant</p>
- * <p>ProjectName:odin-rest</p>
- * <p>Description:常量類，記錄系統常量信息 </p>
- * <p>Copyright:Copyright (c) 2018</p>
- * <p>Company:Foxconn</p>
- * @author zn.xie(F1334993)
- * @date:2018-06-28
- * @version 1.0
- */
+
 public class BaseConstant {
 
 	/**

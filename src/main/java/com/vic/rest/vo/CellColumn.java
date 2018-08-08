@@ -4,16 +4,7 @@ package com.vic.rest.vo;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * <p>Titile:CellType</p>
- * <p>ProjectName:odin</p>
- * <p>Description:文件上傳單元格類型 </p>
- * <p>Copyright:Copyright (c) 2018</p>
- * <p>Company:Foxconn</p>
- * @author zn.xie(F1334993)
- * @date:2018-08-04
- * @version 1.0
- */
+
 public class CellColumn {
 	
 	public CellColumn(int index, String column, int dataType, int columnType) {
