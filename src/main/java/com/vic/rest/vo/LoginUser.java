@@ -1,27 +1,6 @@
-/**======================================================================
- * 版權：
- * 文件：com.odin.rest.vo
- * 所含類：LoginUser 
- * 修改記錄
- * 日期				作者					版本				內容
- * ======================================================================
- * 
- * ======================================================================
- */
+
 package com.vic.rest.vo;
 
-import org.apache.commons.lang3.StringUtils;
-
-/**
- * <p>Titile:LoginUser</p>
- * <p>ProjectName:odin</p>
- * <p>Description:TODO </p>
- * <p>Copyright:Copyright (c) 2018</p>
- * <p>Company:Foxconn</p>
- * @author zn.xie(F1334993)
- * @date:2018-11-22
- * @version 1.0
- */
 public class LoginUser {
 
 	private String token;

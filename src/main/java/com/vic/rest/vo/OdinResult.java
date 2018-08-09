@@ -1,31 +1,11 @@
-/**======================================================================
- * 版權：
- * 文件：com.odin.rest.vo
- * 所含類：OdinResult 
- * 修改記錄
- * 日期				作者					版本				內容
- * ======================================================================
- * 
- * ======================================================================
- */
+
 package com.vic.rest.vo;
 
 import java.util.List;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-//import com.system.rest.constant.BaseConstant;
 
-/**
- * <p>Titile:OdinResult</p>
- * <p>ProjectName:odin</p>
- * <p>Description:接口返回信息 </p>
- * <p>Copyright:Copyright (c) 2018</p>
- * <p>Company:Foxconn</p>
- * @author zn.xie(F1334993)
- * @date:2018-06-30
- * @version 1.0
- */
 public class OdinResult {
 
     // 定義jackson對象
@@ -71,10 +51,6 @@ public class OdinResult {
         this.errmsg = BaseConstant.API_RESPONSE_STATUS_ERRMSG.get(BaseConstant.API_RESPONSE_STATUS_SUCCESS);
         this.payload = payload;
     }
-
-//    public Boolean isOK() {
-//        return this.status == 200;
-//    }
 
     public Integer getStatus() {
         return status;
