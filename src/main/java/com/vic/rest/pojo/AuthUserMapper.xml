@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.odin.rest.mapper.odin.AuthUserMapper" >
+  <resultMap id="BaseResultMap" type="com.odin.rest.pojo.AuthUser" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="password" property="password" jdbcType="VARCHAR" />
+    <result column="last_login" property="lastLogin" jdbcType="TIMESTAMP" />
+    <result column="is_superuser" property="isSuperuser" jdbcType="VARCHAR" />
+    <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="first_name" property="firstName" jdbcType="VARCHAR" />
+    <result column="last_name" property="lastName" jdbcType="VARCHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="is_staff" property="isStaff" jdbcType="VARCHAR" />
+    <result column="is_active" property="isActive" jdbcType="VARCHAR" />
+    <result column="date_joined" property="dateJoined" jdbcType="TIMESTAMP" />
+    <result column="sap_user" property="sapUser" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="phone_number" property="phoneNumber" jdbcType="VARCHAR" />
+    <result column="backfill_time" property="backfillTime" jdbcType="TIMESTAMP" />
+    <result column="Function" property="function" jdbcType="VARCHAR" />
+    <result column="site" property="site" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="comment" property="comment" jdbcType="VARCHAR" />
+    <result column="department" property="department" jdbcType="VARCHAR" />
+    <result column="manufacture" property="manufacture" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, 
+    is_active, date_joined, sap_user, name, phone_number, backfill_time, Function, site, 
+    status, comment, department, manufacture
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.odin.rest.pojo.AuthUserExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from auth_user
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from auth_user
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from auth_user
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.odin.rest.pojo.AuthUserExample" >
+    delete from auth_user
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.odin.rest.pojo.AuthUser"  useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+    insert into auth_user (id, password, last_login, 
+      is_superuser, username, first_name, 
+      last_name, email, is_staff, 
+      is_active, date_joined, sap_user, 
+      name, phone_number, backfill_time, 
+      Function, site, status, 
+      comment, department, manufacture
+      )
+    select #{id,jdbcType=INTEGER}, #{password,jdbcType=VARCHAR}, #{lastLogin,jdbcType=TIMESTAMP}, 
+      #{isSuperuser,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR}, #{firstName,jdbcType=VARCHAR}, 
+      #{lastName,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{isStaff,jdbcType=VARCHAR}, 
+      #{isActive,jdbcType=VARCHAR}, #{dateJoined,jdbcType=TIMESTAMP}, #{sapUser,jdbcType=VARCHAR}, 
+      #{name,jdbcType=VARCHAR}, #{phoneNumber,jdbcType=VARCHAR}, #{backfillTime,jdbcType=TIMESTAMP}, 
+      #{function,jdbcType=VARCHAR}, #{site,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, 
+      #{comment,jdbcType=VARCHAR}, #{department,jdbcType=VARCHAR}, #{manufacture,jdbcType=VARCHAR}
+	from DUAL
+	where not exists(select id from auth_user where username = #{username,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.odin.rest.pojo.AuthUser" >
+    insert into auth_user
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="password != null" >
+        password,
+      </if>
+      <if test="lastLogin != null" >
+        last_login,
+      </if>
+      <if test="isSuperuser != null" >
+        is_superuser,
+      </if>
+      <if test="username != null" >
+        username,
+      </if>
+      <if test="firstName != null" >
+        first_name,
+      </if>
+      <if test="lastName != null" >
+        last_name,
+      </if>
+      <if test="email != null" >
+        email,
+      </if>
+      <if test="isStaff != null" >
+        is_staff,
+      </if>
+      <if test="isActive != null" >
+        is_active,
+      </if>
+      <if test="dateJoined != null" >
+        date_joined,
+      </if>
+      <if test="sapUser != null" >
+        sap_user,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="phoneNumber != null" >
+        phone_number,
+      </if>
+      <if test="backfillTime != null" >
+        backfill_time,
+      </if>
+      <if test="function != null" >
+        Function,
+      </if>
+      <if test="site != null" >
+        site,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="comment != null" >
+        comment,
+      </if>
+      <if test="department != null" >
+        department,
+      </if>
+      <if test="manufacture != null" >
+        manufacture,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="password != null" >
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="lastLogin != null" >
+        #{lastLogin,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isSuperuser != null" >
+        #{isSuperuser,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null" >
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="firstName != null" >
+        #{firstName,jdbcType=VARCHAR},
+      </if>
+      <if test="lastName != null" >
+        #{lastName,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="isStaff != null" >
+        #{isStaff,jdbcType=VARCHAR},
+      </if>
+      <if test="isActive != null" >
+        #{isActive,jdbcType=VARCHAR},
+      </if>
+      <if test="dateJoined != null" >
+        #{dateJoined,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sapUser != null" >
+        #{sapUser,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="phoneNumber != null" >
+        #{phoneNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="backfillTime != null" >
+        #{backfillTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="function != null" >
+        #{function,jdbcType=VARCHAR},
+      </if>
+      <if test="site != null" >
+        #{site,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="comment != null" >
+        #{comment,jdbcType=VARCHAR},
+      </if>
+      <if test="department != null" >
+        #{department,jdbcType=VARCHAR},
+      </if>
+      <if test="manufacture != null" >
+        #{manufacture,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.odin.rest.pojo.AuthUserExample" resultType="java.lang.Integer" >
+    select count(*) from auth_user
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update auth_user
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.password != null" >
+        password = #{record.password,jdbcType=VARCHAR},
+      </if>
+      <if test="record.lastLogin != null" >
+        last_login = #{record.lastLogin,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.isSuperuser != null" >
+        is_superuser = #{record.isSuperuser,jdbcType=VARCHAR},
+      </if>
+      <if test="record.username != null" >
+        username = #{record.username,jdbcType=VARCHAR},
+      </if>
+      <if test="record.firstName != null" >
+        first_name = #{record.firstName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.lastName != null" >
+        last_name = #{record.lastName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.email != null" >
+        email = #{record.email,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isStaff != null" >
+        is_staff = #{record.isStaff,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isActive != null" >
+        is_active = #{record.isActive,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dateJoined != null" >
+        date_joined = #{record.dateJoined,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.sapUser != null" >
+        sap_user = #{record.sapUser,jdbcType=VARCHAR},
+      </if>
+      <if test="record.name != null" >
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.phoneNumber != null" >
+        phone_number = #{record.phoneNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="record.backfillTime != null" >
+        backfill_time = #{record.backfillTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.function != null" >
+        Function = #{record.function,jdbcType=VARCHAR},
+      </if>
+      <if test="record.site != null" >
+        site = #{record.site,jdbcType=VARCHAR},
+      </if>
+      <if test="record.status != null" >
+        status = #{record.status,jdbcType=VARCHAR},
+      </if>
+      <if test="record.comment != null" >
+        comment = #{record.comment,jdbcType=VARCHAR},
+      </if>
+      <if test="record.department != null" >
+        department = #{record.department,jdbcType=VARCHAR},
+      </if>
+      <if test="record.manufacture != null" >
+        manufacture = #{record.manufacture,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update auth_user
+    set id = #{record.id,jdbcType=INTEGER},
+      password = #{record.password,jdbcType=VARCHAR},
+      last_login = #{record.lastLogin,jdbcType=TIMESTAMP},
+      is_superuser = #{record.isSuperuser,jdbcType=VARCHAR},
+      username = #{record.username,jdbcType=VARCHAR},
+      first_name = #{record.firstName,jdbcType=VARCHAR},
+      last_name = #{record.lastName,jdbcType=VARCHAR},
+      email = #{record.email,jdbcType=VARCHAR},
+      is_staff = #{record.isStaff,jdbcType=VARCHAR},
+      is_active = #{record.isActive,jdbcType=VARCHAR},
+      date_joined = #{record.dateJoined,jdbcType=TIMESTAMP},
+      sap_user = #{record.sapUser,jdbcType=VARCHAR},
+      name = #{record.name,jdbcType=VARCHAR},
+      phone_number = #{record.phoneNumber,jdbcType=VARCHAR},
+      backfill_time = #{record.backfillTime,jdbcType=TIMESTAMP},
+      Function = #{record.function,jdbcType=VARCHAR},
+      site = #{record.site,jdbcType=VARCHAR},
+      status = #{record.status,jdbcType=VARCHAR},
+      comment = #{record.comment,jdbcType=VARCHAR},
+      department = #{record.department,jdbcType=VARCHAR},
+      manufacture = #{record.manufacture,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.odin.rest.pojo.AuthUser" >
+    update auth_user
+    <set >
+      <if test="password != null" >
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="lastLogin != null" >
+        last_login = #{lastLogin,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isSuperuser != null" >
+        is_superuser = #{isSuperuser,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null" >
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="firstName != null" >
+        first_name = #{firstName,jdbcType=VARCHAR},
+      </if>
+      <if test="lastName != null" >
+        last_name = #{lastName,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="isStaff != null" >
+        is_staff = #{isStaff,jdbcType=VARCHAR},
+      </if>
+      <if test="isActive != null" >
+        is_active = #{isActive,jdbcType=VARCHAR},
+      </if>
+      <if test="dateJoined != null" >
+        date_joined = #{dateJoined,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sapUser != null" >
+        sap_user = #{sapUser,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="phoneNumber != null" >
+        phone_number = #{phoneNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="backfillTime != null" >
+        backfill_time = #{backfillTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="function != null" >
+        Function = #{function,jdbcType=VARCHAR},
+      </if>
+      <if test="site != null" >
+        site = #{site,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="comment != null" >
+        comment = #{comment,jdbcType=VARCHAR},
+      </if>
+      <if test="department != null" >
+        department = #{department,jdbcType=VARCHAR},
+      </if>
+      <if test="manufacture != null" >
+        manufacture = #{manufacture,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.odin.rest.pojo.AuthUser" >
+    update auth_user
+    set password = #{password,jdbcType=VARCHAR},
+      last_login = #{lastLogin,jdbcType=TIMESTAMP},
+      is_superuser = #{isSuperuser,jdbcType=VARCHAR},
+      username = #{username,jdbcType=VARCHAR},
+      first_name = #{firstName,jdbcType=VARCHAR},
+      last_name = #{lastName,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      is_staff = #{isStaff,jdbcType=VARCHAR},
+      is_active = #{isActive,jdbcType=VARCHAR},
+      date_joined = #{dateJoined,jdbcType=TIMESTAMP},
+      sap_user = #{sapUser,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      phone_number = #{phoneNumber,jdbcType=VARCHAR},
+      backfill_time = #{backfillTime,jdbcType=TIMESTAMP},
+      Function = #{function,jdbcType=VARCHAR},
+      site = #{site,jdbcType=VARCHAR},
+      status = #{status,jdbcType=VARCHAR},
+      comment = #{comment,jdbcType=VARCHAR},
+      department = #{department,jdbcType=VARCHAR},
+      manufacture = #{manufacture,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
